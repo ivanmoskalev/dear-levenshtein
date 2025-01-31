@@ -15,9 +15,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Build
-      run: swift build -v
-    - name: Run tests
-      run: swift test -v --parallel --skip XnLevenshteinPerformance
-    - name: Run tests
-      run: swift test -v --skip XnLevenshteinTests -Xswiftc -O
+    - name: Run unit tests
+      run: swift test -v --parallel --filter XnLevenshteinTests
+    - name: Run performance tests
+      run: swift test -v --filter XnLevenshteinPerformance -Xswiftc -O
