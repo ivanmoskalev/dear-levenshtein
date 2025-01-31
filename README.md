@@ -1,12 +1,14 @@
-# XnTemplate
+# XnLevenshtein
 > this library is part of [xn](https://github.com/ivanmoskalev/xn) suite
+
+Levenshtein edit distance implementation for `Sequence`.
 
 ## Installation
 
-XnTemplate is distributed via Swift Package Manager.
+XnLevenshtein is distributed via Swift Package Manager.
 
 ```swift
-.package(url: "https://github.com/ivanmoskalev/XnTemplate.git", from: "1.0.0")
+.package(url: "https://github.com/ivanmoskalev/XnLevenshtein.git", from: "1.0.0")
 ```
 
 ## Contributing
