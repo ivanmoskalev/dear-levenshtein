@@ -28,11 +28,11 @@ public func levenshteinDistance<A: Collection, B: Collection>(_ a: A, _ b: B) ->
     while indexA != a.endIndex {
         currentRow[0] = i + 1
         var j = 0
-        var otherIndex = b.startIndex
+        var indexB = b.startIndex
 
         let elementA = a[indexA]
-        while otherIndex != b.endIndex {
-            let elementB = b[otherIndex]
+        while indexB != b.endIndex {
+            let elementB = b[indexB]
             let cost = (elementA == elementB) ? 0 : 1
 
             let insertion = previousRow[j + 1] + 1
@@ -41,11 +41,10 @@ public func levenshteinDistance<A: Collection, B: Collection>(_ a: A, _ b: B) ->
 
             currentRow[j + 1] = min(insertion, deletion, substitution)
 
-            b.formIndex(after: &otherIndex)
+            b.formIndex(after: &indexB)
             j += 1
         }
 
-        // Prepare for next iteration.
         swap(&previousRow, &currentRow)
         a.formIndex(after: &indexA)
         i += 1
