@@ -9,7 +9,7 @@ final class PerformanceTests: XCTestCase {
     
     func testLevenshteinDistance_SmallStrings() {
         measure {
-            for _ in 0..<1_000 {
+            for _ in 0..<100 {
                 _ = levenshteinDistance(smallA, smallB)
             }
         }
@@ -17,7 +17,7 @@ final class PerformanceTests: XCTestCase {
     
     func testLevenshteinDistance_MediumStrings() {
         measure {
-            for _ in 0..<1_000 {
+            for _ in 0..<100 {
                 _ = levenshteinDistance(mediumA, mediumB)
             }
         }

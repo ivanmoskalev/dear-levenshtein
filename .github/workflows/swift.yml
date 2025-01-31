@@ -10,12 +10,18 @@ on:
     branches: [ "main" ]
 
 jobs:
-  test:
+  unit-tests:
     runs-on: macos-15
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Run unit tests
-      run: swift test -v --parallel --filter XnLevenshteinTests
-    - name: Run performance tests
-      run: swift test -v --filter XnLevenshteinPerformance -Xswiftc -O
+      - uses: actions/checkout@v4
+      - name: Run unit tests
+        run: swift test -v --parallel --filter XnLevenshteinTests
+
+  performance-tests:
+    runs-on: macos-15
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run performance tests
+        run: swift test -v --filter XnLevenshteinPerformance -Xswiftc -O
