@@ -1,7 +1,7 @@
 # XnLevenshtein
 > this library is part of [xn](https://github.com/ivanmoskalev/xn) suite
 
-Generic Levenshtein edit distance implementation for `Collection` with O(n × m) time and O(m) complexity. 
+Generic Levenshtein edit distance implementation for `Collection` with O(n × m) time and O(m) space complexity. 
 
 ## Installation
 
