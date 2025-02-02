@@ -14,7 +14,7 @@ let package = Package(
     ],
     targets: [
         .target(name: "XnLevenshtein"),
-        .testTarget(name: "XnLevenshteinTests", dependencies: ["XnLevenshtein"]),
+        .testTarget(name: "XnLevenshteinUnit", dependencies: ["XnLevenshtein"]),
         .testTarget(name: "XnLevenshteinPerformance", dependencies: ["XnLevenshtein"])
     ]
 )
