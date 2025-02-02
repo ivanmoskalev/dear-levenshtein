@@ -20,7 +20,9 @@ jobs:
       - name: coverage
         uses: sersoft-gmbh/swift-coverage-action@v4.0
       - name: codecov
-        run: bash <(curl -s https://codecov.io/bash)
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
           
 
   performance-tests:
@@ -28,9 +30,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: Run performance tests
+      - name: perf tests
         run: swift test -v --filter XnLevenshteinPerformance -Xswiftc -O
       - name: coverage
         uses: sersoft-gmbh/swift-coverage-action@v4.0
       - name: codecov
-        run: bash <(curl -s https://codecov.io/bash)
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
