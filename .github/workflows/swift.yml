@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: unit tests
-        run: swift test -v --parallel --filter XnLevenshteinTests
+        run: swift test -v --parallel --filter XnLevenshteinTests --enable-code-coverage
       - name: coverage
         uses: sersoft-gmbh/swift-coverage-action@v4.0
       - name: codecov
@@ -31,7 +31,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: perf tests
-        run: swift test -v --filter XnLevenshteinPerformance -Xswiftc -O
+        run: swift test -v --filter XnLevenshteinPerformance --enable-code-coverage -Xswiftc -O
       - name: coverage
         uses: sersoft-gmbh/swift-coverage-action@v4.0
       - name: codecov
