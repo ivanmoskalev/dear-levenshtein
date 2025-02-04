@@ -1,5 +1,5 @@
 import XCTest
-import XnLevenshtein
+import DearLevenshtein
 
 final class PerformanceTests: XCTestCase {
     let smallA = String(repeating: "a", count: 10)

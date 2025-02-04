@@ -4,17 +4,17 @@
 import PackageDescription
 
 let package = Package(
-    name: "XnLevenshtein",
+    name: "DearLevenshtein",
     platforms: [
         .macOS(.v10_15),
         .iOS(.v15)
     ],
     products: [
-        .library(name: "XnLevenshtein", targets: ["XnLevenshtein"]),
+        .library(name: "DearLevenshtein", targets: ["DearLevenshtein"]),
     ],
     targets: [
-        .target(name: "XnLevenshtein"),
-        .testTarget(name: "XnLevenshteinUnit", dependencies: ["XnLevenshtein"]),
-        .testTarget(name: "XnLevenshteinPerformance", dependencies: ["XnLevenshtein"])
+        .target(name: "DearLevenshtein"),
+        .testTarget(name: "DearLevenshteinUnit", dependencies: ["DearLevenshtein"]),
+        .testTarget(name: "DearLevenshteinPerformance", dependencies: ["DearLevenshtein"])
     ]
 )

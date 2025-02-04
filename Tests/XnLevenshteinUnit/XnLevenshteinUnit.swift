@@ -1,5 +1,5 @@
 import Testing
-import XnLevenshtein
+import DearLevenshtein
 
 @Test
 func stringDistances() async throws {
