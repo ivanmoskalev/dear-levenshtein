@@ -1,4 +1,4 @@
-# DearLevenshtein
+# dear-levenshtein
 > this library is part of [dear](https://github.com/ivanmoskalev/dear) suite
 
 Generic Levenshtein edit distance implementation for `Collection` with O(n × m) time and O(m) space complexity. 
@@ -8,7 +8,7 @@ Generic Levenshtein edit distance implementation for `Collection` with O(n × m)
 DearLevenshtein is distributed via Swift Package Manager.
 
 ```swift
-.package(url: "https://github.com/ivanmoskalev/DearLevenshtein.git", from: "1.0.0")
+.package(url: "https://github.com/ivanmoskalev/dear-levenshtein.git", from: "1.0.0")
 ```
 
 ## Contributing
